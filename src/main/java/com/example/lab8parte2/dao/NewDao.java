@@ -20,4 +20,13 @@ public class NewDao {
 
         return Arrays.asList(response.getBody());
     }
+
+
+    public List<news> filtrar2() {
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<news[]> response = restTemplate.getForEntity(
+                "https://api.coinstats.app/public/v1/news?skip=0&limit=50", news[].class);
+
+        return Arrays.asList(response.getBody());
+    }
 }

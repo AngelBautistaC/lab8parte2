@@ -16,7 +16,13 @@ public class NewController {
     @GetMapping({"/list", "", "/"})
     public String filtrarC(Model model) {
         model.addAttribute("listaProductos", newDao.filtrar());
-        return "product/list";
+        return "product/new";
+    }
+
+    @GetMapping({"/filtro"})
+    public String filtro(Model model) {
+        model.addAttribute("filtro", newDao.filtrar2());
+        return "product/new";
     }
 
 }
