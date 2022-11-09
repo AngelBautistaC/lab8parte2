@@ -16,29 +16,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Northwind</a>
+      <a class="navbar-brand" href="#">Coins</a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" th:href="@{/product}">Product</a>
+
         </li>
       </ul>
     </div>
   </nav>
-  <h2>Lista de Productos</h2>
-  <a class="btn btn-primary mt-4 mb-4" th:href="@{'/product/new'}">Nuevo Producto</a>
+  <h2>Lista de Coins</h2>
+
   <div th:if="${msg != null}" th:text="${msg}" class="alert alert-success" role="alert"></div>
   <table class="table">
     <thead>
     <tr>
-      <th>#</th>
-      <th>Product Name</th>
-      <th>Categoría</th>
-      <th>Proveedor</th>
-      <th>Precio Unitario</th>
-      <th>Stock</th>
-      <th>¿Descontinuado?</th>
-      <th></th>
-      <th></th>
+
+      <th>Nombre de la Moneda</th>
+      <th>Simbolo</th>
+      <th>Precio</th>
+      <th>Volumen</th>
+
     </tr>
     </thead>
     <tbody>
@@ -49,10 +46,6 @@
       <td th:text="${product.price}"></td>
       <td th:text="${product.volume}"></td>
 
-      <td><a class="btn btn-primary" th:href="@{'/product/edit' + '?id=' + ${product.id}}">Editar</a>
-      </td>
-      <td><a class="btn btn-danger" th:href="@{'/product/delete' + '?id=' + ${product.id}}">Borrar</a>
-      </td>
     </tr>
     </tbody>
   </table>
